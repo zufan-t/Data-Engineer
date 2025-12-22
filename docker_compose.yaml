@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mage:
+    image: mageai/mageai:latest
+    container_name: mage_otsuka_project
+    command: mage start fmcg_project
+    env_file:
+      - .env
+    ports:
+      - "6789:6789"
+    volumes:
+      - ./:/home/src/
+    restart: on-failure

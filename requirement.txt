@@ -1,0 +1,6 @@
+mage-ai
+pandas
+sqlalchemy
+psycopg2-binary
+faker
+requests
