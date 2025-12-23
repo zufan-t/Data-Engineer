@@ -7,7 +7,7 @@ import pytz
 
 # Ambil rahasia dari GitHub
 API_KEY = os.getenv("WEATHER_API_KEY")
-DB_URI = os.getenv("DB_SUPABASE_URI")
+DB_URI = os.getenv("DB_URI")
 
 # Kota Distribusi Otsuka (Sukabumi = Pabrik Pusat)
 CITIES = ["Sukabumi", "Jakarta", "Surabaya", "Semarang", "Bandung"]
