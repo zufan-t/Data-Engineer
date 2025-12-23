@@ -1,0 +1,28 @@
+name: Otsuka Supply Chain Weather ETL
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Ambil Kode
+        uses: actions/checkout@v3
+
+      - name: Siapkan Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Library
+        run: pip install pandas sqlalchemy psycopg2-binary requests pytz
+
+      - name: Jalankan ETL
+        env:
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+          DB_URI: ${{ secrets.DB_URI }}
+        run: python etl_weather.py
