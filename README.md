@@ -15,7 +15,11 @@ Sistem ETL otomatis yang berjalan di Cloud tanpa biaya server ($0 Cost).
 
 ## 📸 Bukti Berjalan (Proof of Concept)
 **1. Otomatisasi Sukses (GitHub Actions):**
-![Screenshot GitHub Actions](LINK_GAMBAR_ACTIONS_DISINI)
+<img width="906" height="794" alt="image" src="https://github.com/user-attachments/assets/ddfd99ea-4489-4ad2-88e2-e0ad858b758e" />
+
+[https://github.com/user-attachments/assets/ddfd99ea-4489-4ad2-88e2-e0ad858b758e]
 
 **2. Data Masuk ke Database (Supabase):**
-![Screenshot Supabase](LINK_GAMBAR_SUPABASE_DISINI)
+<img width="1253" height="879" alt="image" src="https://github.com/user-attachments/assets/cd0ade6a-bc3a-491b-9a0b-d24bc166dfeb" />
+
+(https://github.com/user-attachments/assets/cd0ade6a-bc3a-491b-9a0b-d24bc166dfeb)
