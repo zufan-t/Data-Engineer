@@ -1,0 +1,10 @@
+name: 'unnes_smart_drink'
+version: '1.0.0'
+config-version: 2
+profile: 'unnes_smart_drink'
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+models:
+  unnes_smart_drink:
+    +materialized: table

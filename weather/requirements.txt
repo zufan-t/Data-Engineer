@@ -1,0 +1,6 @@
+apache-airflow-providers-google
+pandas
+pandas-gbq
+google-cloud-bigquery
+dbt-bigquery
+requests

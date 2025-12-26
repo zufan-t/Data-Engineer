@@ -1,0 +1,17 @@
+# Abaikan folder Log Airflow (Penyebab Error Kamu)
+logs/
+*.log
+
+# Abaikan Kunci Rahasia (PENTING)
+keys/
+*.json
+
+# Abaikan folder sampah Python & dbt
+__pycache__/
+*.pyc
+target/
+dbt_packages/
+
+# Abaikan file sistem
+.DS_Store
+.env
