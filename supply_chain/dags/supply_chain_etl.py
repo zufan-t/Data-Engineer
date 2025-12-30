@@ -72,7 +72,7 @@ def extract_and_load_direct(**kwargs):
 with DAG(
     'aio_sandbox_pipeline',
     default_args=default_args,
-    # schedule_interval='@daily', #perubahan disini
+    schedule_interval='@daily',
     catchup=False,
     description='Direct ETL pipeline for BigQuery Sandbox',
     tags=['aio', 'sandbox']
