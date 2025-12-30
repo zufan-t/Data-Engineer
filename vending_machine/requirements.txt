@@ -1,0 +1,6 @@
+streamlit
+kafka-python-ng
+dlt[postgres]
+psycopg2-binary
+duckdb
+pandas
