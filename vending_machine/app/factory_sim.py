@@ -3,11 +3,9 @@ import time
 import random
 from kafka import KafkaProducer
 
-# Ubah port menjadi 9094 agar sesuai dengan jalur OUTSIDE di Docker
 producer = KafkaProducer(
     bootstrap_servers=['localhost:9094'], 
     value_serializer=lambda v: json.dumps(v).encode('utf-8'),
-    # Tambahkan request_timeout agar tidak menunggu terlalu lama jika gagal
     request_timeout_ms=10000 
 )
 print("🚀 Mengirim data sensor ke Kafka...")
