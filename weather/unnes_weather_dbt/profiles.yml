@@ -4,9 +4,9 @@ unnes_smart_drink:
     dev:
       type: bigquery
       method: service-account
-      project: proyek1-476022  # <--- PASTIKAN INI BENAR
+      project: proyek1-476022  
       dataset: dbt_sales_mart
       threads: 1
       keyfile: /opt/airflow/keys/gcp_credentials.json
-      location: US # 
+      location: US 
       timeout_seconds: 300
