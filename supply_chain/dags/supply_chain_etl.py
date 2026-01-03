@@ -22,7 +22,7 @@ default_args = {
 }
 
 def extract_and_load_direct(**kwargs):
-    print("Generating data...")
+    print("Generating data")
     products = [
         {'id': 'SKU-001', 'name': 'Pocari Sweat 350ml', 'category': 'Beverage'},
         {'id': 'SKU-002', 'name': 'Pocari Sweat 500ml', 'category': 'Beverage'},
@@ -84,7 +84,6 @@ with DAG(
     )
 
     transform_sql = f"""
-    -- 1. Create Tables if not exist
     CREATE TABLE IF NOT EXISTS `{PROJECT_ID}.{DATASET_NAME}.dim_product` (
         product_id STRING, 
         product_name STRING, 
@@ -101,7 +100,6 @@ with DAG(
         job_run_date DATE
     );
 
-    -- 2. Upsert Dimension Table (Product)
     MERGE `{PROJECT_ID}.{DATASET_NAME}.dim_product` T
     USING (
         SELECT DISTINCT product_id, product_name, category 
@@ -114,7 +112,6 @@ with DAG(
         INSERT (product_id, product_name, category, updated_at)
         VALUES (product_id, product_name, category, CURRENT_TIMESTAMP());
 
-    -- 3. Insert into Fact Table
     INSERT INTO `{PROJECT_ID}.{DATASET_NAME}.fact_inventory`
     SELECT 
         transaction_id,
