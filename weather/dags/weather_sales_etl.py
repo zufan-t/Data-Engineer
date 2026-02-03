@@ -9,7 +9,7 @@ from google.oauth2 import service_account
 
 PROJECT_ID = 'proyek1-476022'
 DATASET_RAW = 'raw_data_layer'
-API_KEY = '4f4cc497beb8ac56b8c43f4cd04c12a9'
+API_KEY = 'type your APIkey here'
 LAT = '-7.052' 
 LON = '110.418'
 KEY_PATH = '/opt/airflow/keys/gcp_credentials.json'
